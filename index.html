@@ -74,16 +74,30 @@ td {
 /* This makes the day circles/squares flexible */
 td > span {
     color: #555;
-    padding: 15% 0; /* Percentage padding makes height scale with width */
+    padding: 15% 0; 
     display: block;
     border: 2px solid transparent;
-    transition: all 0.3s ease;
+    transition: background 0.2s ease, color 0.2s ease; /* Smooth transition */
+    cursor: pointer;
 }
 
+/* The hover effect you requested */
+td > span:hover {
+    background: #ececec !important;
+    color: #000 !important;
+    border-radius: 5px; /* Adds a slight roundness to the hover box itself */
+}
+
+/* Ensure the 'Today' highlight stays visible or adjusts on hover */
 td.avui > span {
     font-weight: bold;
     background-color: #91bbac;
     color: #fff;
+}
+
+td.avui > span:hover {
+    background-color: #7da395 !important; /* Slightly darker version of your green on hover */
+    color: #fff !important;
 }
 
 /* Responsive Navigation Buttons */
